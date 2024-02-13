@@ -24,7 +24,7 @@ export default defineNuxtConfig({
 				},
 				{
 					rel: 'stylesheet',
-					href: 'https://fonts.googleapis.com/css?family=Staatliches'
+					href: 'https://fonts.googleapis.com/css?family=Open+Sans'
 				},
 			],
 		}

@@ -4,7 +4,7 @@
 			<div class="flex flex-col">
 				<div class="flex justify-between items-center">
 					<span class="text-4xl font-bold tracking-wide">Muhammad Nurhafiz</span>
-					<div @click="toggleDark()" class="w-fit p-1 bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-800 hover:bg-zinc-100 rounded-md cursor-pointer">
+					<div @click="toggleDark()" class="w-fit p-2 bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-800 hover:bg-zinc-100 rounded-md cursor-pointer">
 						<svg v-if="isDark" class="w-6 h-6 fill-yellow-gray-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
 							<path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
 						</svg>
@@ -23,24 +23,16 @@
 					</svg>
 					<span class="text-zinc-700 dark:text-zinc-300">Based in Kuala Lumpur</span>
 				</div>
-				<div class="flex space-x-2 flex-wrap">
-					<NuxtLink to="mailto:hafiz@enygma.ai" target="_blank">
-						<div class="flex items-center mt-4 border border-zinc-200 dark:border-zinc-700 w-fit p-2 rounded-md">
-							<svg class="w-6 h-6 stroke-zinc-700 dark:stroke-zinc-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-							</svg>
-						</div>
-					</NuxtLink>
-					<NuxtLink to="https://github.com/kurkurzz" target="_blank">
-						<div class="flex items-center mt-4 border border-zinc-200 dark:border-zinc-700 w-fit p-2 rounded-md">
-							<img class="w-6 h-6 object-contain" :src="isDark?'/assets/github.png':'/assets/github-dark.png'" alt="github logo">
-						</div>
-					</NuxtLink>
-					<NuxtLink to="https://www.linkedin.com/in/hafiz-enygma/" target="_blank">
-						<div class="flex items-center mt-4 border border-zinc-200 dark:border-zinc-700 bg-white w-fit p-2 rounded-md">
-							<img class="w-6 h-6 object-contain grayscale" src="/assets/linkedin.png" alt="github logo">
-						</div>
-					</NuxtLink>
+				<div class="mt-4 text-zinc-700 dark:text-zinc-300">
+					<div>
+						<span>Mail: <NuxtLink to="mailto:hafiz@enygma.ai" target="_blank" >hafiz@enygma.ai</NuxtLink></span>
+					</div>
+					<div>
+						<span>Github: <NuxtLink to="https://github.com/kurkurzz" target="_blank" >https://github.com/kurkurzz</NuxtLink></span>
+					</div>
+					<div>
+						<span>Linkedin: <NuxtLink to="https://www.linkedin.com/in/hafiz-enygma/" target="_blank" >https://www.linkedin.com/in/hafiz-enygma/</NuxtLink></span>
+					</div>
 				</div>
 			</div>
 			<div class="mt-8">
@@ -55,7 +47,7 @@
 					<div class="flex flex-col">
 						<div class="flex justify-between">
 							<span class="">University of Malaya</span>
-							<span class="font-sourcecodepro">2019 - 2023</span>
+							<span class="">2019 - 2023</span>
 						</div>
 						<p class="text-sm mt-2">Bachelor in Computer Science (Artificial Intelligence)</p>
 						<p class="text-sm">3.95 CGPA</p>
@@ -63,7 +55,7 @@
 					<div class="flex flex-col mt-4">
 						<div class="flex justify-between">
 							<span class="">University of Malaya</span>
-							<span class="font-sourcecodepro">2018 - 2019</span>
+							<span class="">2018 - 2019</span>
 						</div>
 						<p class="text-sm mt-2">Centre for Foundation Studies in Science</p>
 						<p class="text-sm">4.00 CGPA</p>
@@ -71,7 +63,7 @@
 					<div class="flex flex-col mt-4">
 						<div class="flex justify-between">
 							<span class="">SAM Bestari, Subang Jaya</span>
-							<span class="font-sourcecodepro">2013 - 2017</span>
+							<span class="">2013 - 2017</span>
 						</div>
 						<p class="text-sm mt-2">Physical Science</p>
 						<p class="text-sm">SPM: 7A+ 4A</p>
@@ -101,8 +93,12 @@ const projectList = [
 ]
 </script>
 
-<style>
+<style scoped>
 p {
 	@apply text-zinc-700 dark:text-zinc-300 font-inconsolata
+}
+
+a {
+	@apply underline text-zinc-700 hover:text-zinc-800 dark:text-zinc-300 dark:hover:text-zinc-200
 }
 </style>

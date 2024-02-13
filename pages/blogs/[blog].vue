@@ -1,29 +1,39 @@
 <template>
-	<div class="px-6 container max-w-5xl mx-auto sm:grid grid-cols-12 gap-x-12 ">
-		<div v-if="blog!=null" class="col-span-12 lg:col-span-9">
-			<BlogHeader :blog="blog"/>
-			<div
-			class="prose prose-pre:max-w-xs sm:prose-pre:max-w-full prose-sm sm:prose-base md:prose-lg
-			prose-h1:no-underline max-w-5xl mx-auto prose-zinc dark:prose-invert prose-img:rounded-lg"
-			>
-			<ContentRenderer v-if="articles" :value="articles">
-				<template #empty>
-				<p>No content found.</p>
-				</template>
-			</ContentRenderer>
+	<div v-if="blog!=null" class="flex flex-col font-opensans">
+		<div>
+			<div>
+				<span class="font-bold text-xl md:text-3xl">{{ blog.title }}</span>
+			</div>
+			<div class="mt-2 text-xs md:text-sm">
+				<span>{{ dayjs(blog.date).format('MMMM D, YYYY') }}</span>
+				<span class=""> | Author: Hafiz</span>
 			</div>
 		</div>
-		<!-- <BlogToc /> -->
+		
+		<div
+		class="max-w-none prose prose-sm md:prose-lg prose-zinc dark:prose-invert"
+		>
+		<ContentRenderer :value="blog">
+			<template #empty>
+			<p>No content found.</p>
+			</template>
+		</ContentRenderer>
+		</div>
 	</div>
 </template>
 
 <script setup>
+import dayjs from 'dayjs'
+
+definePageMeta({
+	layout: 'blog'
+})
+
 const route  = useRoute()
 const blog = ref()
 
 const fetchContent = async () => {
 	blog.value = await queryContent(route.path).findOne()
-	console.log(blog.value)
 }
 
 onMounted(() => {

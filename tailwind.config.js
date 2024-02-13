@@ -9,12 +9,13 @@ module.exports = {
 			'sourcecodepro': ['Source Code Pro'],
 			'poppins': ['Poppins'],
 			'staatliches': ['Staatliches'],
-			'inconsolata': ['Inconsolata']
+			'inconsolata': ['Inconsolata'],
+			'opensans': ['Open Sans']
 		},
 		extend: {
 		},
 	},
 	plugins: [
-
+		require('@tailwindcss/typography'),
 	],
 }
