@@ -4,7 +4,9 @@ export default defineNuxtConfig({
 	modules: [
 		'@nuxt/ui',
 		'@vueuse/nuxt',
-		'@nuxt/content'
+		'@nuxt/content',
+		'@nuxtjs/sitemap',
+		'nuxt-og-image'
 	],
 	app: {
 		head: {
@@ -28,5 +30,15 @@ export default defineNuxtConfig({
 				},
 			],
 		}
+	},
+	sitemap: {
+		strictNuxtContentPaths: true,
+	},
+	site: {
+		url: 'https://byhafiz.com',
+		identity: {
+			type: 'Person',
+		},
+		twitter: '@apezzz_z',
 	},
 })

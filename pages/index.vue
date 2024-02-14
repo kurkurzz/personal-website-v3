@@ -1,10 +1,10 @@
 <template>
-	<div class="w-screen h-fit min-h-screen  bg-zinc-50 dark:bg-zinc-900 dark:text-white text-zinc-900 font-inconsolata">
+	<div class="relative h-fit min-h-screen  bg-zinc-50 dark:bg-zinc-900 dark:text-white text-zinc-900 font-inconsolata">
 		<div class="max-w-3xl w-full px-4 py-8 h-full mx-auto flex flex-col">
 			<div class="flex flex-col">
 				<div class="flex justify-between items-center">
 					<span class="text-4xl font-bold tracking-wide">Muhammad Nurhafiz</span>
-					<div @click="toggleDark()" class="w-fit p-2 bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-800 hover:bg-zinc-100 rounded-md cursor-pointer">
+					<div @click="toggleDark()" class="ml-4 w-fit p-2 bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-800 hover:bg-zinc-100 rounded-md cursor-pointer">
 						<svg v-if="isDark" class="w-6 h-6 fill-yellow-gray-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
 							<path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
 						</svg>
@@ -12,10 +12,12 @@
 							<path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
 						</svg>
 					</div>
+					<span class="ml-auto">Go to <NuxtLink to="/blogs" class="underline">Blogs</NuxtLink></span>
+					
 				</div>
 				<p class="mt-4 ">
 					Co-founder and CTO of <NuxtLink to="https://enygma.ai" target="_blank" class="underline">Enygma</NuxtLink>. AI engineer, cloud architect, and fullstack developer.
-					Executed and lead AI projects worth million dollars for fortune 500 clients around the world.
+					Executed and lead AI projects worth million ringgits for fortune 500 clients around the world.
 				</p>
 				<div class="flex items-center mt-4 ">
 					<svg  class="w-5 h-5 stroke-zinc-700 dark:stroke-zinc-300 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -79,7 +81,6 @@
 
 <script setup>
 const isDark = useDark()
-
 const toggleDark = () => {
 	isDark.value = !isDark.value
 }
