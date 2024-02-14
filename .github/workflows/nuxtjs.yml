@@ -31,8 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install bun
-        uses: oven-sh/setup-bun@v1
+    #   - name: Install bun
+    #     uses: oven-sh/setup-bun@v1
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -41,8 +41,8 @@ jobs:
             echo "command=install" >> $GITHUB_OUTPUT
             exit 0
           elif [ -f "${{ github.workspace }}/package.json" ]; then
-            echo "manager=bun" >> $GITHUB_OUTPUT
-            echo "command=install" >> $GITHUB_OUTPUT
+            echo "manager=npm" >> $GITHUB_OUTPUT
+            echo "command=ci" >> $GITHUB_OUTPUT
             exit 0
           else
             echo "Unable to determine package manager"
@@ -52,6 +52,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: "npm"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
