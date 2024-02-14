@@ -86,6 +86,11 @@ export default defineNuxtConfig({
 					href: 'https://fonts.googleapis.com/css?family=Open+Sans'
 				},
 			],
+			script: [{
+				src: "https://beamanalytics.b-cdn.net/beam.min.js",
+				async: true,
+				"data-token": "5e05d85b-b368-48d1-8731-3912e775b8eb"
+			}],
 		}
 	},
 	// nitro: {
