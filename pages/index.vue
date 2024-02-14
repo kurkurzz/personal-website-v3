@@ -79,6 +79,10 @@ const projectList = [
 	{name: 'Razi AI', description: 'Assist medical personnel on identifying known disease based on xrays and doctor records.'},
 	{name: 'Sphera AI', description: 'Using computer vision to assist football referee in realtime on-field decision making. Generate highlights based on key moments identified by the AI.'},
 ]
+
+defineOgImageScreenshot({
+	colorScheme: 'dark'
+})
 </script>
 
 <style scoped>
