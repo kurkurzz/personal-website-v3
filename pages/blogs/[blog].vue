@@ -39,6 +39,16 @@ await fetchContent()
 
 useHead({
 	title: blog.value.title,
+	htmlAttrs: {
+		lang: 'en'
+	},
+	link: [
+		{
+			rel: 'icon',
+			// type: 'image/png',
+			href: '/favicon.ico'
+			}
+	],
 	meta: [
 		{
 			name: 'description',
@@ -87,6 +97,7 @@ useHead({
 		// 	name: 'twitter:image',
 		// 	content: data.value.ogImage || data.value.image,
 		// },
+		
 	],
 	link: [
 		{
@@ -97,15 +108,8 @@ useHead({
 	titleTemplate: 'Hafiz\'s Blog - %s',
 })
 
-// Generate OG Image
-// defineOgImageComponent('Test', {
-// 	headline: 'Greetings 👋',
-// 	title: blog.value.title || '',
-// 	description: blog.value.description || '',
-// 	// link: data.value.ogImage,
-// })
 defineOgImageScreenshot({
-  	colorScheme: 'dark'
+	colorScheme: 'dark'
 })
 </script>
 

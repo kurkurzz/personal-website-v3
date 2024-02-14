@@ -21,6 +21,7 @@
   "devDependencies": {
     "@nuxtjs/sitemap": "^5.1.0",
     "@tailwindcss/typography": "^0.5.10",
-    "nuxt-og-image": "^3.0.0-rc.38"
+    "nuxt-og-image": "^3.0.0-rc.38",
+    "playwright": "^1.41.2"
   }
 }
