@@ -73,17 +73,11 @@
 </template>
 
 <script setup>
-const isDark = useDark()
-const toggleDark = () => {
-	isDark.value = !isDark.value
-}
-
 const projectList = [
 	{name: 'Asrow AI', description: 'AI-powered right-of-way surveillance platform. Increase operation efficiency, enhance reporting, reduce 3 weeks works to few hours.'},
 	{name: 'Rigg AI', description: 'AI-powered offshore rig, vessels inspection platform. Schedule maintenance and prevent breakdown with cost saving up to million dollars.'},
 	{name: 'Razi AI', description: 'Assist medical personnel on identifying known disease based on xrays and doctor records.'},
 	{name: 'Sphera AI', description: 'Using computer vision to assist football referee in realtime on-field decision making. Generate highlights based on key moments identified by the AI.'},
-
 ]
 </script>
 

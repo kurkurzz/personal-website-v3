@@ -18,6 +18,8 @@
 <script setup>
 import dayjs from 'dayjs'
 
+const route = useRoute()
+
 definePageMeta({
 	layout: 'blog'
 })
@@ -96,7 +98,6 @@ defineOgImageScreenshot({
 	colorScheme: 'dark'
 })
 
-const route  = useRoute()
 const blogs = ref([])
 
 const fetchContent = async () => {
