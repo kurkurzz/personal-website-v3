@@ -64,10 +64,10 @@ useHead({
 			property: 'og:description',
 			content: blog.value.description,
 		},
-		{
-			property: 'og:image',
-			content: data.value.ogImage || data.value.image,
-		},
+		// {
+		// 	property: 'og:image',
+		// 	content: data.value.ogImage || data.value.image,
+		// },
 		 // Test on: https://cards-dev.twitter.com/validator or https://socialsharepreview.com/
 		{ name: 'twitter:site', content: '@apezzz_z' },
 		{ name: 'twitter:card', content: 'summary_large_image' },
@@ -83,10 +83,10 @@ useHead({
 			name: 'twitter:description',
 			content: blog.value.description,
 		},
-		{
-			name: 'twitter:image',
-			content: data.value.ogImage || data.value.image,
-		},
+		// {
+		// 	name: 'twitter:image',
+		// 	content: data.value.ogImage || data.value.image,
+		// },
 	],
 	link: [
 		{
