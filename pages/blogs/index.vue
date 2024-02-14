@@ -23,7 +23,7 @@ definePageMeta({
 })
 
 const route  = useRoute()
-const blogs = ref()
+const blogs = ref([])
 
 const fetchContent = async () => {
 	blogs.value = await queryContent('blogs').find()
