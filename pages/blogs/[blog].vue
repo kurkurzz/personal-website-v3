@@ -6,7 +6,7 @@
 			</div>
 			<div class="mt-2 text-xs md:text-sm">
 				<span>{{ dayjs(blog.date).format('MMMM D, YYYY') }}</span>
-				<span class=""> | Author: Hafiz</span>
+				<span class=""> | Author: Hafiz, CTO at <NuxtLink to="https://enygma.ai" target="_blank" class="underline">Enygma</NuxtLink></span>
 			</div>
 		</div>
 		
@@ -114,5 +114,7 @@ defineOgImageScreenshot({
 </script>
 
 <style scoped>
-
+a {
+	@apply underline text-zinc-700 hover:text-zinc-800 dark:text-zinc-300 dark:hover:text-zinc-200
+}
 </style>
