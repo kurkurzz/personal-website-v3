@@ -25,9 +25,9 @@
 					<div>
 						<span>Github: <NuxtLink to="https://github.com/kurkurzz" target="_blank" >https://github.com/kurkurzz</NuxtLink></span>
 					</div>
-					<div>
+					<-- <div>
 						<span>Linkedin: <NuxtLink to="https://www.linkedin.com/in/hafiz-enygma/" target="_blank" >https://www.linkedin.com/in/hafiz-enygma/</NuxtLink></span>
-					</div>
+					</div> --> 
 				</div>
 			</div>
 			<div class="mt-8">
@@ -42,7 +42,7 @@
 					<div class="flex flex-col">
 						<div class="flex justify-between">
 							<span class="">University of Malaya</span>
-							<span class="">2019 - 2023</span>
+							<-- <span class="">2019 - 2023</span> -->
 						</div>
 						<p class="text-sm mt-2">Bachelor in Computer Science (Artificial Intelligence)</p>
 						<p class="text-sm">3.95 CGPA</p>
@@ -50,7 +50,7 @@
 					<div class="flex flex-col mt-4">
 						<div class="flex justify-between">
 							<span class="">University of Malaya</span>
-							<span class="">2018 - 2019</span>
+							<-- <span class="">2018 - 2019</span> -->
 						</div>
 						<p class="text-sm mt-2">Centre for Foundation Studies in Science</p>
 						<p class="text-sm">4.00 CGPA</p>
@@ -58,7 +58,7 @@
 					<div class="flex flex-col mt-4">
 						<div class="flex justify-between">
 							<span class="">SAM Bestari, Subang Jaya</span>
-							<span class="">2013 - 2017</span>
+							<-- <span class="">2013 - 2017</span> -->
 						</div>
 						<p class="text-sm mt-2">Physical Science</p>
 						<p class="text-sm">SPM: 7A+ 4A</p>
@@ -75,7 +75,7 @@
 <script setup>
 const projectList = [
 	{name: 'Asrow AI', description: 'AI-powered right-of-way surveillance platform. Increase operation efficiency, enhance reporting, reduce 3 weeks works to few hours.'},
-	{name: 'Rigg AI', description: 'AI-powered offshore rig, vessels inspection platform. Schedule maintenance and prevent breakdown with cost saving up to million dollars.'},
+	{name: 'Sentry', description: 'AI-powered offshore rig, vessels inspection platform. Schedule maintenance and prevent breakdown with cost saving up to million dollars.'},
 	{name: 'Razi AI', description: 'Assist medical personnel on identifying known disease based on xrays and doctor records.'},
 	{name: 'Sphera AI', description: 'Using computer vision to assist football referee in realtime on-field decision making. Generate highlights based on key moments identified by the AI.'},
 ]
